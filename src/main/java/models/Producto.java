@@ -8,16 +8,16 @@ package models;
  *
  * @author HP 255-G9
  */
-public class productos {
+public class Producto {
     
     private String nombre;
     private double precio;
     private int unidades;
 
-    public productos() {
+    public Producto() {
     }
 
-    public productos(String nombre, double precio, int unidades) {
+    public Producto(String nombre, double precio, int unidades) {
         this.nombre = nombre;
         this.precio = precio;
         this.unidades = unidades;

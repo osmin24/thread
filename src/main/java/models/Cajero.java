@@ -11,20 +11,21 @@ import java.util.List;
  *
  * @author HP 255-G9
  */
-public class cajeros {
+public class Cajero {
     
     private double totalPagar;
     private int numeroCajero;
     private double recibido;
     private double devuelto;
     private String nombrePersonaCajero;
+    private List<Producto> productos = new ArrayList<>();
     
 
-    public cajeros() {
+    public Cajero() {
       
     }
 
-    public cajeros(double totalPagar, int numeroCajero, double recibido, double devuelto, String nombrePersonaCajero) {
+    public Cajero(double totalPagar, int numeroCajero, double recibido, double devuelto, String nombrePersonaCajero) {
   
         this.totalPagar = totalPagar;
         this.numeroCajero = numeroCajero;
@@ -73,7 +74,12 @@ public class cajeros {
         this.nombrePersonaCajero = nombrePersonaCajero;
     }
     
+    public void setProductos(Producto producto){
+        this.productos.add(producto);
+    }
     
-    
+    public List<Producto> getProductos(){
+        return this.productos;
+    }
     
 }

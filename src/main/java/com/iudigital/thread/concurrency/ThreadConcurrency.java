@@ -4,6 +4,9 @@
 
 package com.iudigital.thread.concurrency;
 
+import snthread.ThreadClass;
+import snthread.ThreadClass2;
+
 /**
  *
  * @author HP 255-G9
@@ -11,6 +14,10 @@ package com.iudigital.thread.concurrency;
 public class ThreadConcurrency {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        ThreadClass thread1 = new ThreadClass();
+        ThreadClass2 thread2 = new ThreadClass2();
+        thread1.start();
+        thread2.start();
+        System.out.println("Se termino el cobro");
     }
 }

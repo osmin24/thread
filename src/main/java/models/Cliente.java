@@ -4,29 +4,36 @@
  */
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author HP 255-G9
  */
-public class cliente {
+public class Cliente {
     
     
     private String nombre;
     private String id;
-  
+    private double pagar;
 
-    public cliente() {
+    public Cliente() {
     }
 
     
-    public cliente(String nombre, String id) {
+    public Cliente(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
     }
 
+    public double getPagar() {
+        return pagar;
+    }
+
+    public void setPagar(double pagar) {
+        this.pagar = pagar;
+    }
+
+    
     public String getNombre() {
         return nombre;
     }
