@@ -68,17 +68,21 @@ public class ThreadClass2 extends Thread{
         cajero.setRecibido(cliente1.getPagar());
         System.out.println("Id Cliente: "+cliente1.getId());
         System.out.println("Cliente: "+cliente1.getNombre());
+        long initialTimetotal = System.currentTimeMillis();
         
         for(Producto element : productos){
+            long initialTime = System.currentTimeMillis();
             System.out.println("================================");
             System.out.println("Nombre: "+element.getNombre());
             System.out.println("Precio: "+element.getPrecio());
             System.out.println("Unidades: "+element.getUnidades());
+            long finaltime = System.currentTimeMillis();
+            System.out.println("Tiempo: "+(finaltime - initialTime));
             System.out.println("================================");
             double precio = element.getPrecio()*element.getUnidades();
             total = total + precio;
         }
-        
+        long finaltimetotal = System.currentTimeMillis();
         cajero1.setTotalPagar(total);
         System.out.println("Total a pagar: "+cajero1.getTotalPagar());
         cajero.setDevuelto(total - cajero.getRecibido());
@@ -87,6 +91,7 @@ public class ThreadClass2 extends Thread{
         System.out.println("Nombre de personal: "+cajero1.getNombrePersonaCajero());
         System.out.println("Total recibido: "+cajero1.getRecibido());
         System.out.println("Total devuelto: "+cajero1.getDevuelto());
+        System.out.println("Tiempo total: "+(finaltimetotal - initialTimetotal));
         System.out.println("================================");
     }
     
